@@ -1,0 +1,931 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="藝評稿約每字不到 2 元，請拒絕。拒絕後把稿約與證明寄來，本計畫以每字 2 元補給你。由 FAB DAO 行動客廳支持。">
+<meta name="theme-color" content="#F5F6F1" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#111619" media="(prefers-color-scheme: dark)">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23BF3420'/%3E%3Ctext x='32' y='47' font-size='44' font-family='serif' font-weight='bold' fill='%23fff' text-anchor='middle'%3E%E6%8B%92%3C/text%3E%3C/svg%3E">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://refuse.fabdao.world/">
+<meta property="og:title" content="你拒絕，我給錢">
+<meta property="og:description" content="藝評稿約每字不到 2 元，請拒絕。拒絕後把稿約與證明寄來，本計畫以每字 2 元補給你。由 FAB DAO 行動客廳支持。">
+<meta property="og:image" content="https://refuse.fabdao.world/og.png">
+<meta property="og:image:width" content="2400">
+<meta property="og:image:height" content="1260">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style>
+<title>你拒絕，我給錢</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@400;700;900&amp;family=Noto+Sans+TC:wght@400;500;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;display=swap">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC&display=swap">
+<style id="s">
+/* Layout: a single-column campaign leaflet set on manuscript paper (稿紙): sticky index bar, 68rem column, sections divided by the paper's green double rule; seal red is reserved for refusal and the 2-yuan floor */
+:root{
+  --paper:#F5F6F1;--sheet:#FFFFFF;--ink:#1B2024;--ink2:#47505A;--ink3:#606A74;--line:#D5DAD2;
+  --grid:#7AA68B;--gridsoft:#DDE8E0;--seal:#BF3420;--sealsoft:#F8E2DC;--onseal:#FFFFFF;
+  --ok:#2C7348;--oksoft:#DCEEE2;--mid:#8A610E;--midsoft:#F3E7CB;--scrim:rgba(17,22,25,.45);
+  --shadow:0 1px 0 rgba(27,32,36,.05),0 10px 28px -14px rgba(27,32,36,.22);
+  --f-display:"Noto Serif TC","Songti TC","PMingLiU",serif;
+  --f-body:"Noto Sans TC","PingFang TC","Microsoft JhengHei",system-ui,sans-serif;
+  --f-hand:"LXGW WenKai TC","Kaiti TC","DFKai-SB","Noto Serif TC",serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+  --navh:3.25rem;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --paper:#111619;--sheet:#182026;--ink:#E7EAE5;--ink2:#B4BCC2;--ink3:#8D979F;--line:#2B343B;
+  --grid:#4F7C62;--gridsoft:#1F2F26;--seal:#E35B41;--sealsoft:#3C1F19;--onseal:#FFFFFF;
+  --ok:#63BE89;--oksoft:#19311F;--mid:#DAA947;--midsoft:#33290F;--scrim:rgba(0,0,0,.6);
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --paper:#111619;--sheet:#182026;--ink:#E7EAE5;--ink2:#B4BCC2;--ink3:#8D979F;--line:#2B343B;
+  --grid:#4F7C62;--gridsoft:#1F2F26;--seal:#E35B41;--sealsoft:#3C1F19;--onseal:#FFFFFF;
+  --ok:#63BE89;--oksoft:#19311F;--mid:#DAA947;--midsoft:#33290F;--scrim:rgba(0,0,0,.6);
+  --shadow:0 1px 0 rgba(0,0,0,.3),0 10px 28px -14px rgba(0,0,0,.7);color-scheme:dark}
+
+*,*::before,*::after{box-sizing:border-box}
+body{background:var(--paper);color:var(--ink);font:400 16px/1.75 var(--f-body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--paper)}
+a{color:inherit;text-underline-offset:.2em}
+:focus-visible{outline:2px solid var(--seal);outline-offset:2px}
+.wrap{max-width:68rem;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3,h4{font-family:var(--f-display);font-weight:900;text-wrap:balance;margin:0;line-height:1.3}
+h2{font-size:clamp(1.75rem,4vw,2.35rem);letter-spacing:.02em}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0}
+.sub{color:var(--ink2);max-width:40em;margin-top:.6rem}
+.hint{font-size:.85rem;color:var(--ink3)}
+.muted{color:var(--ink3)}
+.mono,code{font-family:var(--f-mono);font-variant-numeric:tabular-nums}
+.nowrap{white-space:nowrap}
+
+/* nav */
+.topnav{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--paper);border-bottom:1px solid var(--line)}
+.nav-in{display:flex;align-items:center;gap:1rem;min-height:var(--navh)}
+.brand{font-family:var(--f-display);font-weight:900;text-decoration:none;white-space:nowrap;font-size:1rem}
+.links{display:flex;gap:.15rem;overflow-x:auto;scrollbar-width:none;min-width:0;flex:1}
+.links::-webkit-scrollbar{display:none}
+.links a{white-space:nowrap;text-decoration:none;color:var(--ink2);font-size:.9rem;padding:.35rem .6rem;border-radius:4px}
+.links a:hover{color:var(--ink);background:var(--gridsoft)}
+@media (max-width:30rem){.brand{display:none}}
+
+/* hero */
+.hero{padding-block:3.25rem 3.75rem}
+.hero-in{position:relative}
+.eyebrow{font-size:.85rem;letter-spacing:.14em;color:var(--ink2);font-weight:500}
+.hero h1{font-size:clamp(3.1rem,11vw,7.25rem);line-height:1.04;letter-spacing:.03em;margin-top:.6rem;padding-right:clamp(5rem,16vw,10rem)}
+.seal{position:absolute;top:1.5rem;right:max(16px,env(safe-area-inset-right,0px));width:clamp(4.75rem,13vw,8rem);height:clamp(4.75rem,13vw,8rem);display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));grid-auto-flow:column;direction:rtl;place-items:center;padding:clamp(6px,.9vw,11px);background:var(--seal);color:var(--onseal);font:900 clamp(1.55rem,4.6vw,2.85rem)/1 var(--f-display);border-radius:6px;box-shadow:inset 0 0 0 4px var(--seal),inset 0 0 0 6px var(--onseal);transform:rotate(-7deg);animation:stamp .42s cubic-bezier(.2,.9,.3,1.25) .15s both}
+@keyframes stamp{from{transform:rotate(-7deg) scale(1.22)}to{transform:rotate(-7deg) scale(1)}}
+@media (prefers-reduced-motion:reduce){.seal{animation:none}}
+.ms{display:grid;grid-template-columns:repeat(11,minmax(0,1fr));max-width:36rem;border:1px solid var(--grid);outline:1px solid var(--grid);outline-offset:5px;background:var(--sheet);margin-block:2rem 1.6rem}
+.ms span{aspect-ratio:1;display:grid;place-items:center;font:400 clamp(1rem,4.6vw,1.9rem)/1 var(--f-hand);color:var(--ink);border-right:1px solid var(--grid);position:relative}
+.ms span:last-child{border-right:0}
+.ms .hit{color:var(--seal);font-family:var(--f-mono);font-weight:500}
+.ms .hit::after{content:"";position:absolute;inset:13%;border:2px solid var(--seal);border-radius:50%}
+.lede{font-size:1.12rem;max-width:34em}
+.cta{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:1.6rem}
+.cta.sm{margin-top:1rem;gap:.5rem}
+.tally{margin-top:1.4rem;font-size:.92rem;color:var(--ink2)}
+.tally b{font-family:var(--f-mono);font-variant-numeric:tabular-nums;color:var(--ink);font-weight:500}
+
+/* buttons & fields */
+.btn{display:inline-flex;align-items:center;gap:.4em;font:500 .95rem/1.2 var(--f-body);padding:.62em 1.1em;border:1.5px solid var(--ink);border-radius:4px;background:transparent;color:var(--ink);text-decoration:none;cursor:pointer}
+.btn:hover{background:var(--gridsoft)}
+.btn.primary{background:var(--ink);color:var(--paper)}
+.btn.primary:hover{background:var(--ink2);border-color:var(--ink2)}
+.btn.sm{font-size:.85rem;padding:.45em .85em}
+.btn:disabled{opacity:.45;cursor:not-allowed}
+.btn.danger{border-color:var(--seal);color:var(--seal)}
+.field{display:flex;flex-direction:column;gap:.3rem;min-width:0}
+.field label,fieldset>legend{font-size:.85rem;font-weight:500;color:var(--ink2)}
+fieldset{border:0;padding:0;margin:0;min-width:0}
+input[type=text],input[type=number],input[type=date],input[type=month],input[type=url],input[type=email],select,textarea{font:400 1rem/1.4 var(--f-body);color:var(--ink);background:var(--sheet);border:1px solid var(--line);border-radius:4px;padding:.55em .7em;width:100%;min-width:0}
+textarea{resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--grid);outline:2px solid var(--gridsoft);outline-offset:0}
+.seg{display:flex;flex-wrap:wrap;gap:.4rem 1.1rem;align-items:center}
+.seg legend{width:100%;margin-bottom:.3rem}
+.seg label,.check{display:inline-flex;gap:.5rem;align-items:flex-start;font-size:.95rem;color:var(--ink);cursor:pointer}
+.check input,.seg input{margin-top:.38em;accent-color:var(--ink)}
+
+/* sections */
+.sec{padding-block:4rem 3.75rem;border-top:3px double var(--grid);scroll-margin-top:calc(var(--navh) + env(safe-area-inset-top,0px))}
+.sec h3{margin-bottom:.4rem}
+.block{margin-top:2.5rem}
+
+/* calculator */
+.calc{display:grid;gap:1.5rem;margin-top:2rem;align-items:start}
+@media (min-width:52rem){.calc{grid-template-columns:minmax(0,19rem) minmax(0,1fr)}}
+.calc form{display:grid;gap:1.1rem}
+.receipt{background:var(--sheet);border:1px solid var(--line);box-shadow:var(--shadow);padding:1.25rem 1.4rem;min-width:0}
+.receipt-h{font-family:var(--f-display);font-weight:700;letter-spacing:.3em;font-size:.9rem;color:var(--ink3);border-bottom:2px solid var(--ink);padding-bottom:.5rem}
+.verdict{margin-top:.9rem}
+.chip{display:inline-block;font:700 .74rem/1 var(--f-body);letter-spacing:.06em;padding:.4em .6em;border-radius:3px;vertical-align:.12em;margin-right:.35em;white-space:nowrap}
+.chip.low{background:var(--sealsoft);color:var(--seal)}
+.chip.mid{background:var(--midsoft);color:var(--mid)}
+.chip.ok{background:var(--oksoft);color:var(--ok)}
+.chip.neu{background:var(--gridsoft);color:var(--ink2)}
+.rrows{margin-top:1rem}
+.rrow{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:.35rem 1rem;padding-block:.75rem;border-top:1px dashed var(--line)}
+.rl span{display:block;font-weight:500}
+.rl small{color:var(--ink3);font-size:.82rem}
+.ra{font:500 1.35rem/1.2 var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;align-self:center;white-space:nowrap}
+.ra small{font:400 .8rem var(--f-body);color:var(--ink3)}
+.rb{grid-column:1/-1;height:6px}
+.rb i{display:block;height:100%;background:var(--ink3);border-radius:0 3px 3px 0}
+.rrow.p .rb i{background:var(--grid)}
+.rrow.ref .rb i{background:transparent;border:1px dashed var(--ink3)}
+
+/* letter */
+.letter{display:grid;gap:1.25rem;margin-top:2rem;align-items:start}
+@media (min-width:52rem){.letter{grid-template-columns:minmax(0,18rem) minmax(0,1fr)}.letter .cta{grid-column:2}}
+.letter form{display:grid;gap:1rem}
+.paper{min-width:0;background-color:var(--sheet);background-image:linear-gradient(to bottom,transparent calc(100% - 1px),var(--gridsoft) calc(100% - 1px));background-origin:content-box;font:400 1.08rem var(--f-hand);line-height:2.15em;background-size:100% 2.15em;padding:1.2rem 1.5rem;border:1px solid var(--line);border-left:3px double var(--grid);white-space:pre-wrap;overflow-wrap:anywhere;box-shadow:var(--shadow)}
+
+/* apply */
+.plans{display:grid;gap:1rem;margin-top:2rem}
+@media (min-width:44rem){.plans{grid-template-columns:1fr 1fr}}
+.plan{border:1px solid var(--line);background:var(--sheet);padding:1.25rem 1.35rem;display:grid;gap:.65rem;align-content:start}
+.plan h3{font-size:1.25rem;margin:0}
+.plan h3 span{color:var(--ink3);margin-right:.35em}
+.plan .eq{font:500 .92rem/1.5 var(--f-body);background:var(--gridsoft);padding:.55rem .75rem;border-radius:3px}
+.plan .eq b{font-family:var(--f-mono);font-weight:500}
+.plan .when{font-size:.88rem;color:var(--ink2)}
+.elig{display:grid;gap:2rem;margin-top:2.25rem}
+@media (min-width:52rem){.elig{grid-template-columns:1fr 1fr}}
+.ticks{margin:.6rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+.ticks li{display:grid;grid-template-columns:1.1rem minmax(0,1fr);gap:.6rem}
+.ticks li::before{content:"";width:.7rem;height:.7rem;border:1.5px solid var(--grid);margin-top:.5em}
+ol.steps{margin:.6rem 0 0;padding:0;list-style:none;counter-reset:s;display:grid;gap:.85rem}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:2.1rem minmax(0,1fr);gap:.8rem;align-items:start}
+ol.steps li::before{content:counter(s);display:grid;place-items:center;width:2.1rem;height:2.1rem;border:1px solid var(--grid);background:var(--sheet);font:500 .95rem/1 var(--f-mono);color:var(--ink)}
+.applybox{margin-top:2.5rem;border:1px solid var(--line);background:var(--sheet);box-shadow:var(--shadow);scroll-margin-top:calc(var(--navh) + 1rem + env(safe-area-inset-top,0px))}
+.applybox-h{padding:1.1rem 1.35rem;border-bottom:1px solid var(--line);display:grid;gap:.35rem}
+.applygrid{display:grid}
+@media (min-width:60rem){.applygrid{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr)}}
+.applyform{padding:1.35rem;display:grid;gap:1.6rem;min-width:0}
+.applyform fieldset{display:grid;gap:.9rem}
+.applyform>fieldset>legend{font-family:var(--f-display);font-weight:700;font-size:1.05rem;color:var(--ink);margin-bottom:.5rem}
+.two{display:grid;gap:.9rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,11rem),1fr))}
+.appout{padding:1.35rem;border-top:1px solid var(--line);background:var(--paper);display:grid;gap:1rem;align-content:start;min-width:0}
+@media (min-width:60rem){.appout{border-top:0;border-left:1px solid var(--line)}}
+.apptext{font:400 .9rem/1.75 var(--f-body);white-space:pre-wrap;overflow-wrap:anywhere;background:var(--sheet);border:1px solid var(--line);padding:1rem;margin:0;max-height:34rem;overflow:auto}
+.warns ul{margin:.3rem 0 0;padding-left:1.2em;color:var(--mid);font-size:.9rem;display:grid;gap:.2rem}
+.okmsg{color:var(--ok);font-size:.9rem;font-weight:500}
+.sendto{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center;font-size:.92rem}
+.sendto code{background:var(--sheet);border:1px solid var(--line);padding:.3em .55em;border-radius:3px;user-select:all;overflow-wrap:anywhere}
+
+/* rates chart */
+.chart{position:relative;--lab:clamp(7rem,32%,15rem);--val:3.2rem;--gap:.75rem;margin-top:2rem;padding-top:1.9rem}
+.chart .row{position:relative;display:grid;grid-template-columns:var(--lab) minmax(0,1fr) var(--val);align-items:center;gap:0 var(--gap);padding-block:.4rem}
+.chart .lab{text-align:right;line-height:1.3;min-width:0}
+.chart .lab span{display:block;font-size:.88rem;font-weight:500}
+.chart .lab small{display:block;font-size:.76rem;color:var(--ink3)}
+.chart .track{position:relative;height:16px}
+.chart .bar{position:absolute;left:0;top:0;bottom:0;border-radius:0 4px 4px 0}
+.bar.low{background:var(--seal)}.bar.mid{background:var(--mid)}.bar.ok{background:var(--ok)}
+.chart .val{font:500 .9rem var(--f-mono);font-variant-numeric:tabular-nums}
+.chart .axis .track{height:1.3rem;border-top:1px solid var(--line)}
+.chart .axis .track span{position:absolute;top:.2rem;transform:translateX(-50%);font:400 .72rem var(--f-mono);color:var(--ink3)}
+.chart .axis .unit{font:400 .72rem var(--f-body);color:var(--ink3);align-self:start;padding-top:.2rem}
+.refs{position:absolute;top:0;bottom:2rem;left:calc(var(--lab) + var(--gap));right:calc(var(--val) + var(--gap));pointer-events:none;z-index:1}
+.refs i{position:absolute;top:1.6rem;bottom:0;width:0;border-left:2px dashed var(--seal)}
+.refs i.goal{border-left:2px solid var(--ok)}
+.refs b{position:absolute;top:-1.6rem;left:0;white-space:nowrap;font:500 .74rem/1.4 var(--f-body);color:var(--seal);transform:translateX(calc(-100% - 4px))}
+.refs i.goal b{color:var(--ok);transform:translateX(4px)}
+
+/* tables */
+.tbl{overflow-x:auto;margin-top:1rem;border:1px solid var(--line);background:var(--sheet)}
+table{border-collapse:collapse;width:100%;min-width:44rem;font-size:.92rem}
+th{font-weight:500;font-size:.8rem;color:var(--ink3);text-align:left;padding:.65rem .8rem;border-bottom:1px solid var(--line);white-space:nowrap;background:var(--paper)}
+td{padding:.7rem .8rem;border-bottom:1px solid var(--line);vertical-align:top}
+tr:last-child td{border-bottom:0}
+td.n,th.n{font-family:var(--f-mono);font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
+.empty{padding:1.3rem 1.4rem;color:var(--ink3);font-size:.95rem;border:1px dashed var(--line);margin-top:1rem;background:var(--sheet)}
+.foot-note{margin-top:.75rem;font-size:.85rem;color:var(--ink3)}
+.raises{margin:.8rem 0 0;padding:0;list-style:none;display:grid;gap:.5rem}
+.raises li{background:var(--sheet);border:1px solid var(--line);padding:.7rem 1rem}
+
+/* ledger */
+.figs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,9rem),1fr));gap:1px;background:var(--line);border:1px solid var(--line);margin:2rem 0 0}
+.fig{background:var(--sheet);padding:1rem 1.1rem}
+.fig dt{font-size:.82rem;color:var(--ink3)}
+.fig dd{margin:0;font:500 1.55rem/1.25 var(--f-mono);font-variant-numeric:tabular-nums}
+.fig dd small{font:400 .8rem var(--f-body);color:var(--ink3);margin-left:.2em}
+.budget-note{margin-top:.9rem;font-size:.9rem;color:var(--ink2);max-width:46em}
+
+/* writing */
+.arts{display:grid;gap:1rem;margin-top:1.5rem;grid-template-columns:repeat(auto-fill,minmax(min(100%,20rem),1fr))}
+.art{display:grid;gap:.4rem;padding:1.2rem 1.3rem;border:1px solid var(--line);background:var(--sheet);text-decoration:none;align-content:start}
+.art:hover{border-color:var(--grid)}
+.art h3{margin:0}
+.art .by{font-size:.85rem;color:var(--ink3)}
+.art .orig{font-size:.85rem;color:var(--seal)}
+
+/* privacy */
+.tiers{display:grid;gap:1rem;margin-top:2rem}
+@media (min-width:56rem){.tiers{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.tier{background:var(--sheet);border:1px solid var(--line);border-top:4px solid var(--c);padding:1.2rem 1.3rem;min-width:0}
+.tier.pub{--c:var(--grid)}.tier.priv{--c:var(--ink)}.tier.none{--c:var(--seal)}
+.tier h3{margin:0}
+.tier .who{font-size:.85rem;color:var(--ink3);margin-top:.2rem}
+.tier ul{margin:.9rem 0 0;padding-left:1.1em;display:grid;gap:.5rem;font-size:.95rem}
+.chainnote{margin-top:1.25rem;padding:1rem 1.2rem;background:var(--midsoft);color:var(--ink);font-size:.93rem;max-width:52em}
+
+/* guide & faq */
+.guide{display:grid;gap:2.5rem;margin-top:2rem}
+.guide>div{min-width:0}
+.guide .sub,.guide li{overflow-wrap:anywhere}
+@media (min-width:56rem){.guide{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}}
+.faq details{border-bottom:1px solid var(--line);padding-block:.85rem}
+.faq details:first-of-type{border-top:1px solid var(--line)}
+.faq summary{cursor:pointer;font-weight:500;list-style:none;display:flex;justify-content:space-between;gap:1rem}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"＋";color:var(--ink3);flex:none}
+.faq details[open] summary::after{content:"－"}
+.faq details p{margin-top:.55rem;color:var(--ink2)}
+
+/* footer */
+.foot{padding-block:3.75rem 5rem;border-top:3px double var(--grid)}
+.support{display:grid;gap:1.1rem;margin-top:1.25rem}
+.kv{display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.kv>span:first-child{font-size:.85rem;color:var(--ink3);min-width:5.5rem}
+.kv code{background:var(--sheet);border:1px solid var(--line);padding:.3em .55em;border-radius:3px;overflow-wrap:anywhere;user-select:all}
+.colophon{margin-top:2.75rem;font-size:.85rem;color:var(--ink3);display:grid;gap:.2rem}
+
+/* reader */
+.reader{padding-block:2.5rem 5rem;max-width:44rem}
+.back{font-size:.9rem;color:var(--ink2)}
+.origin{display:grid;grid-template-columns:auto minmax(0,1fr);gap:1rem;align-items:center;margin-top:1.5rem;padding:1rem 1.2rem;border:1px solid var(--line);border-left:3px solid var(--seal);background:var(--sheet);font:400 1.02rem/1.8 var(--f-hand)}
+.stamp-s{width:2.6rem;height:2.6rem;display:grid;place-items:center;background:var(--seal);color:var(--onseal);font:900 1.5rem/1 var(--f-display);border-radius:4px;transform:rotate(-6deg)}
+.reader h1{font-size:clamp(2rem,6vw,2.9rem);margin-top:2rem}
+.reader .by{color:var(--ink3);margin-top:.6rem;font-size:.92rem}
+.rbody{margin-top:2rem;font:400 1.08rem/1.95 var(--f-display)}
+.rbody p{margin:0 0 1.2em}
+.rbody h2{font-size:1.35rem;margin:2em 0 .8em}
+
+/* preview banner */
+.pv{background:var(--midsoft);border-bottom:1px solid var(--line)}
+.pv .wrap{display:flex;flex-wrap:wrap;gap:.5rem 1rem;align-items:center;padding-block:.6rem;font-size:.92rem}
+
+/* admin */
+#adminBtn{position:fixed;right:calc(16px + env(safe-area-inset-right,0px));bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:40;box-shadow:var(--shadow)}
+#admin{position:fixed;inset:0;z-index:50;display:flex;justify-content:flex-end}
+.ad-scrim{position:absolute;inset:0;background:var(--scrim)}
+.ad-panel{position:relative;width:min(46rem,100%);height:100%;background:var(--paper);display:flex;flex-direction:column;box-shadow:var(--shadow);padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.ad-head{display:flex;justify-content:space-between;align-items:center;gap:1rem;padding:.9rem max(16px,env(safe-area-inset-right,0px)) .9rem 1.25rem;border-bottom:1px solid var(--line)}
+.ad-head strong{font-family:var(--f-display);font-size:1.15rem;display:block}
+.ad-head span{font-size:.82rem;color:var(--ink3)}
+.ad-tabs{display:flex;gap:.25rem;padding:.4rem 1.25rem 0;border-bottom:1px solid var(--line);overflow-x:auto}
+.ad-tabs button{font:500 .9rem var(--f-body);background:none;border:0;border-bottom:2px solid transparent;padding:.55rem .8rem;color:var(--ink2);cursor:pointer;white-space:nowrap}
+.ad-tabs button[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--ink)}
+.ad-flash{font-size:.9rem}
+.ad-flash:not(:empty){padding:.6rem 1.25rem;background:var(--oksoft);color:var(--ok)}
+.ad-flash.err:not(:empty){background:var(--sealsoft);color:var(--seal)}
+.ad-body{flex:1;overflow:auto;padding:1.25rem;display:grid;gap:1.5rem;align-content:start}
+.ad-bar{border-top:1px solid var(--line);padding:.8rem max(16px,env(safe-area-inset-right,0px)) .8rem 1.25rem;display:flex;flex-wrap:wrap;gap:.6rem 1rem;align-items:center;justify-content:space-between;background:var(--sheet)}
+.bar-l{font-size:.88rem}
+.bar-l span{color:var(--ink3)}
+.bar-r{display:flex;flex-wrap:wrap;gap:.5rem}
+.tier-tag{display:inline-block;font:700 .74rem/1 var(--f-body);padding:.42em .62em;border-radius:3px;letter-spacing:.05em;vertical-align:.1em}
+.tier-tag.priv{background:var(--ink);color:var(--paper)}
+.tier-tag.pub{background:var(--oksoft);color:var(--ok)}
+.ad-note{font-size:.88rem;color:var(--ink2);margin-top:.6rem}
+.ad-status{font-size:.88rem;color:var(--ink3);margin-top:.75rem}
+.ad-actions{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1rem}
+.ad-paste{margin-top:1rem;border:1px solid var(--line);background:var(--sheet);padding:.75rem 1rem}
+.ad-paste summary{cursor:pointer;font-weight:500;font-size:.92rem}
+.ad-paste textarea{margin-block:.6rem}
+.ad-budget{margin-top:1rem;font-size:.88rem;color:var(--ink2)}
+.ad-budget b{font-family:var(--f-mono);font-weight:500;color:var(--ink)}
+.ad-budget .warn{color:var(--seal)}
+.caselist{display:grid;gap:.5rem;margin-top:.75rem}
+.case-row{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;gap:.35rem .8rem;align-items:center;width:100%;text-align:left;background:var(--sheet);border:1px solid var(--line);padding:.65rem .8rem;font:400 .9rem/1.4 var(--f-body);color:var(--ink);cursor:pointer}
+.case-row:hover{border-color:var(--grid)}
+.case-row[aria-current="true"]{border-color:var(--ink)}
+.case-row span{min-width:0;overflow-wrap:anywhere}
+@media (max-width:34rem){.case-row{grid-template-columns:auto auto minmax(0,1fr)}.case-row .x{grid-column:span 1}}
+.ad-form{display:grid;gap:1.4rem;background:var(--sheet);border:1px solid var(--line);padding:1.1rem}
+.ad-group{display:grid;gap:.8rem}
+.ad-group h4{font-size:1rem;display:flex;flex-wrap:wrap;gap:.5rem;align-items:center}
+.ad-grid{display:grid;gap:.8rem;grid-template-columns:repeat(auto-fit,minmax(min(100%,12rem),1fr))}
+.field.wide{grid-column:1/-1}
+.ad-amount{font-size:.95rem}
+.ad-amount b{font:500 1.2rem var(--f-mono)}
+.ad-preview{border:2px solid var(--grid);background:var(--paper);padding:1rem;display:grid;gap:.75rem}
+.ad-preview h4{font-size:.98rem}
+.ad-preview dl{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.3rem 1rem;margin:0;font-size:.9rem}
+.ad-preview dt{color:var(--ink3)}
+.ad-preview dd{margin:0;overflow-wrap:anywhere}
+.ad-list{border:1px solid var(--line);background:var(--sheet)}
+.ad-list summary{padding:.75rem 1rem;cursor:pointer;font-weight:500;display:flex;justify-content:space-between;gap:1rem}
+.ad-list .count{font-family:var(--f-mono);color:var(--ink3)}
+.ad-list ul{list-style:none;margin:0;padding:0 1rem}
+.ad-list li{display:flex;justify-content:space-between;gap:1rem;align-items:center;padding:.5rem 0;border-top:1px solid var(--line);font-size:.9rem}
+.ad-list li span{min-width:0;overflow-wrap:anywhere}
+.ad-list-foot{padding:.75rem 1rem;border-top:1px solid var(--line)}
+.ad-list .ad-form{margin:0 1rem 1rem}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<script id="m">
+(function(){
+'use strict';
+const DKEY='ryd-public-draft';
+const SECTORS=['公部門','公立大學','基金會','民間媒體','其他'];
+const SOURCES=['發起人親身經驗','發起人整理','同業告知','申請案','單位公告','回報'];
+const CASE_STATUS=['收件','審核中','核准','已撥款','預算用罄','不符資格'];
+const PUB_STATUS=['已撥款','審核通過，待撥款','預算用罄，已登記'];
+const PUBLISHABLE=['核准','已撥款','預算用罄'];
+const ADMIN_FEE=2000;
+
+let PUB={v:1,updated:'',settings:{},rates:[],refusals:[],funds:[],articles:[],raises:[]};
+const A={ready:false,open:false,tab:'cases',pendingImport:null,draft:null,restored:false,preview:false,publishing:false,confirmPub:false,confirmDiscard:false,itemEdit:null,itemDelArm:false,openLists:{}};
+const reduced=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+/* ---------- helpers ---------- */
+const $=(s,r)=>(r||document).querySelector(s);
+const esc=s=>String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const num=v=>{const n=parseFloat(String(v==null?'':v).replace(/,/g,''));return isFinite(n)?n:0};
+const money=n=>Math.round(n).toLocaleString('zh-TW');
+const fmt1=n=>(Math.round(n*10)/10).toLocaleString('zh-TW');
+const rateFmt=r=>String(Math.round(r*100)/100);
+const safeUrl=u=>{u=String(u||'').trim();return /^https:\/\/[^\s"'<>]+$/.test(u)?u:''};
+const pad=n=>(n<10?'0':'')+n;
+const today=()=>{const d=new Date();return d.getFullYear()+'-'+pad(d.getMonth()+1)+'-'+pad(d.getDate())};
+const newId=p=>p+Date.now().toString(36)+Math.random().toString(36).slice(2,6);
+const clone=o=>JSON.parse(JSON.stringify(o));
+const rateClass=r=>r<2?'low':(r<3?'mid':'ok');
+const rateLabel=r=>r<2?'低於下限':(r<3?'未達目標':'達到目標');
+const VIEW=()=>(A.preview&&A.draft)?A.draft:PUB;
+const go=sel=>{const el=$(sel);if(el)el.scrollIntoView({behavior:reduced?'auto':'smooth',block:'start'})};
+function stats(s){let inc=0,adm=0,paid=0;(s.funds||[]).forEach(f=>{if(f.kind==='執行費')adm+=num(f.amount);else inc+=num(f.amount)});(s.refusals||[]).forEach(r=>{if(r.status==='已撥款')paid+=num(r.payout)});return{inc,adm,paid,bal:inc-paid-adm,count:(s.refusals||[]).length}}
+function readRate(words,mode,rateV,totalV){const w=num(words);if(mode==='t')return w>0?num(totalV)/w:0;return num(rateV)}
+function txLink(u){const s=safeUrl(u);return s?`<a href="${esc(s)}" target="_blank" rel="noopener">查看交易</a>`:'—'}
+
+/* ---------- shell ---------- */
+const NAV=[['calc','試算'],['letter','拒絕信'],['apply','申請'],['rates','稿酬表'],['ledger','帳本'],['writing','文章'],['privacy','資料處理'],['faq','問答']];
+$('#app').innerHTML=`<nav class="topnav" aria-label="頁面導覽"><div class="wrap nav-in"><a class="brand" href="#top">你拒絕，我給錢</a><div class="links">${NAV.map(([h,l])=>`<a href="#${h}">${l}</a>`).join('')}</div></div></nav><div id="main"></div><div id="reader" hidden></div><div id="admin" hidden></div><button type="button" class="btn primary" id="adminBtn" data-act="openAdmin" hidden>發起人後台</button>`;
+
+/* ---------- public sections ---------- */
+function hero(st){
+  const line='一字不到2元，請拒絕。'.split('').map(ch=>`<span${ch==='2'?' class="hit"':''}>${ch}</span>`).join('');
+  return `<header class="hero" id="top"><div class="wrap hero-in">
+  <p class="eyebrow">文字勞動者（藝評）支持計畫</p>
+  <h1>你拒絕，<br>我給錢</h1>
+  <div class="seal" role="img" aria-label="拒然不要"><span>拒</span><span>然</span><span>不</span><span>要</span></div>
+  <div class="ms" role="img" aria-label="一字不到 2 元，請拒絕。">${line}</div>
+  <p class="lede">藝評稿約如果每字不到 2 元，請向邀稿方說明稿酬過低，然後拒絕。把稿約和拒絕證明寄給本計畫，我們以每字 2 元補給你。這是一筆罷工基金，支持敢說不的寫作者。</p>
+  <div class="cta"><a class="btn primary" href="#calc">試算你的稿約</a><a class="btn" href="#apply">怎麼申請</a></div>
+  <p class="tally">至今公開拒絕 <b>${st.count}</b> 次・已補助 <b>${money(st.paid)}</b> 元・基金餘額 <b>${money(st.bal)}</b> 元</p>
+  </div></header>`;
+}
+function secCalc(){
+  return `<section class="sec" id="calc"><div class="wrap">
+  <h2>這份稿約，算不算？</h2>
+  <p class="sub">輸入稿約寫明的最低字數和稿酬。以單篇計價的稿約，用總額除以最低字數換算每字稿酬。</p>
+  <div class="calc">
+    <form id="calcForm" novalidate>
+      <div class="field"><label for="c-words">稿約最低字數</label><input id="c-words" type="number" inputmode="numeric" min="1" step="1" value="3000"></div>
+      <fieldset class="seg"><legend>稿酬怎麼算</legend>
+        <label><input type="radio" name="c-mode" id="c-mode-w" value="w" checked>每字計價</label>
+        <label><input type="radio" name="c-mode" id="c-mode-t" value="t">單篇計價</label>
+      </fieldset>
+      <div class="field" id="c-w-f"><label for="c-rate">每字稿酬（元）</label><input id="c-rate" type="number" inputmode="decimal" min="0" step="0.1" value="1.5"></div>
+      <div class="field" id="c-t-f" hidden><label for="c-total">單篇總額（元）</label><input id="c-total" type="number" inputmode="numeric" min="0" step="100" value="4500"></div>
+      <p class="hint">預設數字是範例：3,000 字、每字 1.5 元。</p>
+    </form>
+    <div class="receipt" id="calcOut" aria-live="polite"></div>
+  </div></div></section>`;
+}
+function renderCalc(){
+  const w=Math.max(0,Math.round(num($('#c-words').value)));
+  const mode=$('#c-mode-t').checked?'t':'w';
+  $('#c-w-f').hidden=mode==='t';$('#c-t-f').hidden=mode!=='t';
+  const r=readRate(w,mode,$('#c-rate').value,$('#c-total').value);
+  const out=$('#calcOut');
+  if(!(w>0&&r>0)){out.innerHTML='<p class="receipt-h">稿費試算</p><p class="verdict">請輸入字數和稿酬。</p>';return}
+  const rf=rateFmt(r);let v;
+  if(r<2)v=`<span class="chip low">低於下限</span>每字 ${rf} 元，低於 2 元。這份稿約符合本計畫的申請條件。`;
+  else if(r<3)v=`<span class="chip mid">未達目標</span>每字 ${rf} 元，達到 2 元下限，不在補助範圍；離每字 3 元的目標還有距離，歡迎回報到稿酬公開表。`;
+  else v=`<span class="chip ok">達到目標</span>每字 ${rf} 元，達到每字 3 元的目標。`;
+  const rows=r<2?[
+    ['接受稿約，寫完交稿',w*r,`${money(w)} 字 × ${rf} 元`,'base'],
+    ['方案一：拒絕，不寫',w,`最低字數的一半 ${fmt1(w/2)} 字 × 2 元`,'p'],
+    ['方案二：拒絕，另寫刊於本站',w*2,`${money(w)} 字 × 2 元`,'p'],
+    ['參考：每字 3 元的目標',w*3,`${money(w)} 字 × 3 元`,'ref']
+  ]:[
+    ['接受稿約，寫完交稿',w*r,`${money(w)} 字 × ${rf} 元`,'base'],
+    ['參考：每字 3 元的目標',w*3,`${money(w)} 字 × 3 元`,'ref']
+  ];
+  const max=Math.max.apply(null,rows.map(x=>x[1]));
+  out.innerHTML=`<p class="receipt-h">稿費試算</p><p class="verdict">${v}</p><div class="rrows">${rows.map(([l,amt,d,k])=>`<div class="rrow ${k}"><div class="rl"><span>${l}</span><small>${d}</small></div><div class="ra">${money(amt)}<small> 元</small></div><div class="rb" aria-hidden="true"><i style="width:${(amt/max*100).toFixed(1)}%"></i></div></div>`).join('')}</div>
+  <p class="hint">實際補助以稿約證明上的最低字數為準，並以基金餘額為限。</p>
+  ${r<2?'<div class="cta sm"><button type="button" class="btn sm" data-act="toLetter">帶入拒絕信</button><button type="button" class="btn sm" data-act="toApply">帶入申請表</button></div>':''}`;
+}
+function secLetter(){
+  return `<section class="sec" id="letter"><div class="wrap">
+  <h2>拒絕信範本</h2>
+  <p class="sub">拒絕最難的是開口。填好下面幾格，複製這封信，改成你自己的語氣再寄出。信末附上本計畫的網址，邀稿單位也會讀到這件事。</p>
+  <div class="letter">
+    <form id="letterForm" novalidate>
+      <div class="field"><label for="l-to">對方稱呼</label><input id="l-to" type="text" placeholder="王編輯"></div>
+      <div class="field"><label for="l-pub">刊物或單位</label><input id="l-pub" type="text" placeholder="《藝術認證》"></div>
+      <div class="field"><label for="l-rate">每字稿酬（元）</label><input id="l-rate" type="number" inputmode="decimal" min="0" step="0.1" value="1.5"></div>
+      <div class="field"><label for="l-sign">你的署名</label><input id="l-sign" type="text"></div>
+    </form>
+    <div class="paper" id="letterOut"></div>
+    <div class="cta sm"><button type="button" class="btn primary" data-copy="#letterOut">複製信件</button></div>
+  </div></div></section>`;
+}
+function renderLetter(){
+  const set=VIEW().settings||{};
+  const to=$('#l-to').value.trim()||'（稱呼）',pub=$('#l-pub').value.trim()||'（刊物或單位）',sign=$('#l-sign').value.trim()||'（署名）';
+  const r=num($('#l-rate').value),rs=r>0?rateFmt(r):'（每字稿酬）';
+  const url=safeUrl(set.siteUrl);
+  $('#letterOut').textContent=`${to}您好：
+
+謝謝您邀請我為${pub}撰稿，也謝謝您想到我。
+
+考量再三，這次只能先婉拒。主要的原因是稿酬：換算下來每字約 ${rs} 元，和一篇評論實際需要的觀看、研究與書寫時間相比，我目前實在難以承接。
+
+我明白稿酬標準多半不是由編輯決定，這封信絕不是針對您或貴單位。只是這幾年物價與基本工資持續調升，藝評稿酬卻少有調整，許多寫作者都面臨同樣的處境。目前有藝評同業發起「你拒絕，我給錢」計畫，希望藝評稿酬能逐步調整到每字至少 2 元，並以每字 3 元為目標。${url?`如果方便的話，也想請您參考，或轉給相關的同仁：
+${url}`:''}
+
+如果日後稿酬有調整的空間，我非常樂意再合作。再次謝謝您的邀請，祝一切順利。
+
+${sign}　敬上`;
+}
+function secApply(set){
+  const mail=set.contactEmail?`<code id="mailTo">${esc(set.contactEmail)}</code><button type="button" class="btn sm" data-copy="#mailTo">複製信箱</button>`:'<span class="muted">計畫信箱即將公布。</span>';
+  return `<section class="sec" id="apply"><div class="wrap">
+  <h2>申請補助</h2>
+  <p class="sub">兩種方案擇一。兩者都要先向邀稿方明確表示稿酬過低，並拒絕這份稿約。</p>
+  <div class="plans">
+    <div class="plan"><h3><span>方案一</span>拒絕，不寫</h3>
+      <p>拒絕之後不寫這篇，也不另行刊出相關內容。補助為稿約最低字數的一半，以每字 2 元計。</p>
+      <p class="eq">3,000 字的稿約 → 1,500 字 × 2 元 = <b>3,000</b> 元</p>
+      <p class="when">審核通過後撥款。</p></div>
+    <div class="plan"><h3><span>方案二</span>拒絕，另寫</h3>
+      <p>拒絕之後，仍然寫這個題目，文章刊在本站。補助為稿約最低字數，以每字 2 元計。</p>
+      <p class="eq">3,000 字的稿約 → 3,000 字 × 2 元 = <b>6,000</b> 元</p>
+      <p class="when">文章完成並刊出後撥款。</p></div>
+  </div>
+  <div class="elig">
+    <div><h3>申請資格</h3><ul class="ticks">
+      <li>具中華民國國籍</li><li>年滿 23 歲，或已大學畢業</li><li>評論對象是視覺藝術或表演藝術</li><li>稿約每字不到 2 元，而且你已經向邀稿方表明稿酬過低並拒絕</li></ul>
+      <p class="hint" style="margin-top:.8rem">目前不支持書評或文學創作。若一段時間內沒有藝評申請，會考慮支持其他文字勞動。</p></div>
+    <div><h3>申請步驟</h3><ol class="steps">
+      <li>拒絕稿約，保留邀稿信和你的拒絕回信。</li><li>填寫下方表格，複製產生的申請內容。</li><li>把申請內容寄到計畫信箱，附上邀稿信與拒絕回信的截圖。</li><li>審核通過後，以 USDT 或 ETH 撥到你的錢包。方案二在文章刊出後撥款。</li></ol></div>
+  </div>
+  <div class="applybox" id="apply-form">
+    <div class="applybox-h"><h3>申請內容產生器</h3><p class="hint">這份表格不會送出，也不會儲存。它只把你填的內容排成申請信，讓你複製到自己的信裡寄出。</p></div>
+    <div class="applygrid">
+      <form class="applyform" id="applyForm" novalidate>
+        <fieldset><legend>你</legend>
+          <div class="field"><label for="a-name">姓名（只有發起人看得到）</label><input id="a-name" type="text" autocomplete="name"></div>
+          <div class="two">
+            <div class="field"><label for="a-display">公開署名</label><select id="a-display"><option>真名</option><option selected>筆名</option><option>匿名</option></select></div>
+            <div class="field" id="a-pen-f"><label for="a-pen">筆名</label><input id="a-pen" type="text"></div>
+          </div>
+          <label class="check"><input type="checkbox" id="a-nat">我具中華民國國籍</label>
+          <label class="check"><input type="checkbox" id="a-age">我年滿 23 歲，或已大學畢業</label>
+        </fieldset>
+        <fieldset><legend>稿約</legend>
+          <div class="two">
+            <div class="field"><label for="a-disc">評論類型</label><select id="a-disc"><option>視覺藝術評論</option><option>表演藝術評論</option><option>其他</option></select></div>
+            <div class="field"><label for="a-unit">邀稿單位或刊物</label><input id="a-unit" type="text"></div>
+          </div>
+          <div class="field"><label for="a-topic">稿約主題（可不填）</label><input id="a-topic" type="text"></div>
+          <div class="two">
+            <div class="field"><label for="a-words">稿約最低字數</label><input id="a-words" type="number" inputmode="numeric" min="1" step="1" value="3000"></div>
+            <fieldset class="seg"><legend>稿酬怎麼算</legend>
+              <label><input type="radio" name="a-mode" id="a-mode-w" value="w" checked>每字</label>
+              <label><input type="radio" name="a-mode" id="a-mode-t" value="t">單篇</label></fieldset>
+          </div>
+          <div class="field" id="a-w-f"><label for="a-rate">每字稿酬（元）</label><input id="a-rate" type="number" inputmode="decimal" min="0" step="0.1" value="1.5"></div>
+          <div class="field" id="a-t-f" hidden><label for="a-total">單篇總額（元）</label><input id="a-total" type="number" inputmode="numeric" min="0" step="100"></div>
+          <div class="two">
+            <div class="field"><label for="a-invited">邀稿日期</label><input id="a-invited" type="date"></div>
+            <div class="field"><label for="a-refused">拒絕日期</label><input id="a-refused" type="date"></div>
+          </div>
+        </fieldset>
+        <fieldset><legend>方案與收款</legend>
+          <fieldset class="seg"><legend>申請方案</legend>
+            <label><input type="radio" name="a-plan" id="a-plan-1" value="1">方案一：拒絕，不寫</label>
+            <label><input type="radio" name="a-plan" id="a-plan-2" value="2">方案二：拒絕，另寫刊於本站</label></fieldset>
+          <label class="check" id="a-nopub-f" hidden><input type="checkbox" id="a-nopub">我確認不會另行刊出對應這份稿約的文章</label>
+          <div class="two">
+            <div class="field"><label for="a-token">收款幣別</label><select id="a-token"><option>USDT</option><option>ETH</option></select></div>
+            <div class="field"><label for="a-wallet">收款錢包地址（0x 開頭）</label><input id="a-wallet" type="text" autocomplete="off" spellcheck="false"></div>
+          </div>
+          <fieldset class="seg"><legend>帳本上可以列出邀稿單位的名稱嗎？</legend>
+            <label><input type="radio" name="a-consent" id="a-consent-y" value="同意">可以</label>
+            <label><input type="radio" name="a-consent" id="a-consent-n" value="不同意">不要列出</label></fieldset>
+        </fieldset>
+      </form>
+      <div class="appout">
+        <div class="warns" id="applyWarn" aria-live="polite"></div>
+        <pre class="apptext" id="applyText"></pre>
+        <div><button type="button" class="btn primary" data-copy="#applyText">複製申請內容</button></div>
+        <div class="sendto"><span>寄到</span>${mail}</div>
+        <p class="hint">信裡請附上：邀稿信或稿約內容的截圖、你的拒絕回信截圖。</p>
+      </div>
+    </div>
+  </div></div></section>`;
+}
+function applyData(){
+  const g=id=>$('#'+id);
+  const w=Math.max(0,Math.round(num(g('a-words').value)));
+  const mode=g('a-mode-t').checked?'t':'w';
+  const r=readRate(w,mode,g('a-rate').value,g('a-total').value);
+  const plan=g('a-plan-1').checked?'1':(g('a-plan-2').checked?'2':'');
+  const consent=g('a-consent-y').checked?'同意':(g('a-consent-n').checked?'不同意':'');
+  return{name:g('a-name').value.trim(),display:g('a-display').value,pen:g('a-pen').value.trim(),nat:g('a-nat').checked,age:g('a-age').checked,disc:g('a-disc').value,unit:g('a-unit').value.trim(),topic:g('a-topic').value.trim(),words:w,mode,r,total:num(g('a-total').value),invited:g('a-invited').value,refused:g('a-refused').value,plan,nopub:g('a-nopub').checked,token:g('a-token').value,wallet:g('a-wallet').value.trim(),consent};
+}
+function renderApply(){
+  const d=applyData();
+  $('#a-w-f').hidden=d.mode==='t';$('#a-t-f').hidden=d.mode!=='t';
+  $('#a-pen-f').hidden=d.display!=='筆名';
+  $('#a-nopub-f').hidden=d.plan!=='1';
+  const amt=d.plan==='1'?d.words:(d.plan==='2'?d.words*2:0);
+  const blank='（未填）';
+  const disp=d.display==='筆名'?`筆名 ${d.pen||blank}`:d.display;
+  const elig=[d.nat?'具中華民國國籍':'',d.age?'年滿 23 歲或大學畢業':''].filter(Boolean).join('；')||'（未勾選）';
+  const L=['【你拒絕，我給錢｜補助申請】','申請日期：'+today(),'姓名：'+(d.name||blank),'公開署名：'+disp,'資格聲明：'+elig,'評論類型：'+d.disc,'邀稿單位／刊物：'+(d.unit||blank),'稿約主題：'+(d.topic||blank),'稿約最低字數：'+(d.words?money(d.words)+' 字':blank),'稿酬：'+(d.mode==='t'?(d.total?`單篇 ${money(d.total)} 元`:blank):(d.r?`每字 ${rateFmt(d.r)} 元`:blank)),'換算每字稿酬：'+(d.r?rateFmt(d.r)+' 元':blank),'邀稿日期：'+(d.invited||blank),'拒絕日期：'+(d.refused||blank),'申請方案：'+(d.plan==='1'?'方案一（拒絕，不寫）':d.plan==='2'?'方案二（拒絕後另寫，刊於本站）':blank),'預估補助：'+(amt?money(amt)+' 元':blank)];
+  if(d.plan==='1')L.push('方案一聲明：'+(d.nopub?'我確認不會另行刊出對應這份稿約的文章':'（未勾選）'));
+  L.push('收款幣別：'+d.token,'收款錢包地址：'+(d.wallet||blank),'公開邀稿單位名稱：'+(d.consent||blank),'附件：邀稿信（或稿約內容）、我的拒絕回信');
+  $('#applyText').textContent=L.join('\n');
+  const W=[];
+  if(!d.name)W.push('請填寫姓名。');
+  if(d.display==='筆名'&&!d.pen)W.push('請填寫筆名，或改選真名、匿名。');
+  if(!d.nat||!d.age)W.push('資格聲明還沒勾選完整。');
+  if(d.disc==='其他')W.push('目前限視覺藝術與表演藝術評論；其他類型要等一段時間沒有藝評申請後才會考慮。');
+  if(!d.unit)W.push('請填寫邀稿單位或刊物。');
+  if(!(d.words>0&&d.r>0))W.push('請填寫字數與稿酬。');
+  else if(d.r>=2)W.push(`每字 ${rateFmt(d.r)} 元，達到 2 元下限，不在補助範圍。`);
+  if(!d.refused)W.push('請填寫拒絕日期。');
+  if(!d.plan)W.push('請選擇方案。');
+  if(d.plan==='1'&&!d.nopub)W.push('方案一需要勾選「不另行刊出」的聲明。');
+  if(!d.wallet)W.push('請填寫收款錢包地址。');
+  else if(!/^0x[0-9a-fA-F]{40}$/.test(d.wallet))W.push('錢包地址看起來不完整：應為 0x 開頭、共 42 個字元。');
+  if(!d.consent)W.push('請選擇帳本上是否列出邀稿單位名稱。');
+  $('#applyWarn').innerHTML=W.length?`<p class="hint">寄出前請補齊：</p><ul>${W.map(x=>`<li>${esc(x)}</li>`).join('')}</ul>`:'<p class="okmsg">內容齊全，可以複製寄出。</p>';
+}
+function secRates(s){
+  const rates=(s.rates||[]).slice().sort((a,b)=>num(b.rate)-num(a.rate));
+  const top=Math.max(4,Math.ceil(Math.max.apply(null,[0].concat(rates.map(r=>num(r.rate))))));
+  const x=v=>(Math.min(Math.max(v,0),top)/top*100).toFixed(2)+'%';
+  const ticks=[];for(let i=0;i<=top;i++)ticks.push(i);
+  const label='各單位每字稿酬：'+rates.map(r=>`${r.unit}${r.pub?' '+r.pub:''}${r.year?' '+r.year:''} ${rateFmt(num(r.rate))} 元`).join('、');
+  const chart=rates.length?`<div class="chart" role="img" aria-label="${esc(label)}">
+    <div class="refs" aria-hidden="true"><i style="left:${x(2)}"><b>下限 2 元</b></i><i class="goal" style="left:${x(3)}"><b>目標 3 元</b></i></div>
+    ${rates.map(r=>{const v=num(r.rate);const sm=[r.pub,r.year].filter(Boolean).map(esc).join('・');return `<div class="row" title="${esc([r.unit,r.pub,r.basis].filter(Boolean).join('｜'))}"><div class="lab"><span>${esc(r.unit)}</span>${sm?`<small>${sm}</small>`:''}</div><div class="track"><i class="bar ${rateClass(v)}" style="width:${x(v)}"></i></div><div class="val">${rateFmt(v)}</div></div>`}).join('')}
+    <div class="row axis" aria-hidden="true"><div></div><div class="track">${ticks.map(t=>`<span style="left:${x(t)}">${t}</span>`).join('')}</div><div class="unit">元／字</div></div>
+  </div>`:'<p class="empty">還沒有稿酬資料。</p>';
+  const table=rates.length?`<div class="tbl"><table><thead><tr><th>單位／刊物</th><th>年份</th><th>每字稿酬</th><th>計算依據</th><th>來源</th><th>備註</th></tr></thead><tbody>${rates.map(r=>{const v=num(r.rate);return `<tr><td><b>${esc(r.unit)}</b>${r.pub?`<br><span class="muted">${esc(r.pub)}</span>`:''}</td><td>${esc(r.year||'—')}</td><td class="nowrap"><span class="chip ${rateClass(v)}">${rateLabel(v)}</span><span class="mono">${rateFmt(v)} 元</span></td><td>${esc(r.basis)}</td><td>${esc(r.source)}</td><td>${esc(r.note)}</td></tr>`}).join('')}</tbody></table></div>`:'';
+  const raises=(s.raises||[]);
+  const set=s.settings||{};
+  return `<section class="sec" id="rates"><div class="wrap">
+  <h2>稿酬公開表</h2>
+  <p class="sub">各單位的藝評稿酬，換算成每字金額。紅色虛線是本計畫主張的下限每字 2 元，綠線是目標每字 3 元。</p>
+  ${chart}${table}
+  <div class="block"><h3>已調升稿酬的單位</h3>
+  ${raises.length?`<ul class="raises">${raises.map(r=>`<li><b>${esc(r.unit)}</b>　每字 <span class="mono">${rateFmt(num(r.from))}</span> 元 → <span class="mono">${rateFmt(num(r.to))}</span> 元${r.date?`<span class="muted">（${esc(r.date)}）</span>`:''}${r.note?`<br><span class="muted">${esc(r.note)}</span>`:''}</li>`).join('')}</ul>`:'<p class="empty">還沒有單位因此調整稿酬。有的話，會記在這裡。</p>'}</div>
+  <div class="block"><h3>回報一筆稿酬</h3>
+  <p class="sub">知道其他單位的稿酬？寫信告訴我們單位、年份、稿酬與字數，以及資料從哪裡來。資料經發起人核實後才會刊出，表上不會列出回報者。單位若認為資料有誤，也歡迎來信更正。${set.contactEmail?`信箱：<code>${esc(set.contactEmail)}</code>`:''}</p></div>
+  </div></section>`;
+}
+function secLedger(s,st,set){
+  const refs=s.refusals||[],funds=(s.funds||[]).slice().sort((a,b)=>String(a.date).localeCompare(String(b.date)));
+  const refT=refs.length?`<div class="tbl"><table><thead><tr><th>編號</th><th>拒絕月份</th><th>邀稿單位</th><th class="n">每字稿酬</th><th>方案</th><th>狀態</th><th class="n">補助</th><th>交易</th></tr></thead><tbody>${refs.map(r=>`<tr><td class="mono">${esc(r.code)}</td><td class="mono">${esc(r.month||'—')}</td><td>${r.unit?esc(r.unit):'<span class="muted">未公開</span>'}${r.sector?`<br><span class="muted">${esc(r.sector)}</span>`:''}</td><td class="n">${rateFmt(num(r.rate))} 元</td><td class="nowrap">${r.plan==='1'?'方案一':r.plan==='2'?'方案二':'—'}</td><td><span class="chip ${r.status==='已撥款'?'ok':'neu'}">${esc(r.status)}</span></td><td class="n">${money(num(r.payout))} 元</td><td>${txLink(r.txUrl)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">還沒有公開的拒絕紀錄。第一筆會記在這裡。</p>';
+  const fundT=funds.length?`<div class="tbl"><table><thead><tr><th>日期</th><th>類別</th><th>說明</th><th class="n">金額</th><th>鏈上金額</th><th>交易</th></tr></thead><tbody>${funds.map(f=>`<tr><td class="mono">${esc(f.date||'—')}</td><td>${esc(f.kind)}</td><td>${esc(f.label)}</td><td class="n">${f.kind==='執行費'?'−':''}${money(num(f.amount))} 元</td><td class="mono">${esc(f.token||'—')}</td><td>${txLink(f.txUrl)}</td></tr>`).join('')}</tbody></table></div>`:'<p class="empty">尚無入帳紀錄。</p>';
+  return `<section class="sec" id="ledger"><div class="wrap">
+  <h2>公開帳本</h2>
+  <p class="sub">每一筆入帳與補助都列在這裡。交易連結指向公開的區塊鏈紀錄，任何人都能查證。</p>
+  <dl class="figs">
+    <div class="fig"><dt>公開拒絕</dt><dd>${st.count}<small>次</small></dd></div>
+    <div class="fig"><dt>入帳</dt><dd>${money(st.inc)}<small>元</small></dd></div>
+    <div class="fig"><dt>已補助</dt><dd>${money(st.paid)}<small>元</small></dd></div>
+    <div class="fig"><dt>執行費</dt><dd>${money(st.adm)}<small>元</small></dd></div>
+    <div class="fig"><dt>餘額</dt><dd>${money(st.bal)}<small>元</small></dd></div>
+  </dl>
+  ${set.budgetNote?`<p class="budget-note">${esc(set.budgetNote)}</p>`:''}
+  <div class="block"><h3>拒絕紀錄</h3>${refT}<p class="foot-note">拒絕紀錄不列申請者姓名；邀稿單位只在申請者同意時列出。預算用完之後的拒絕，仍會登記在這裡。</p></div>
+  <div class="block"><h3>入帳與執行費</h3>${fundT}<p class="foot-note">金額以新台幣計，鏈上金額為實際撥付的幣量。</p></div>
+  </div></section>`;
+}
+function secWriting(s){
+  const arts=(s.articles||[]).slice().sort((a,b)=>String(b.date).localeCompare(String(a.date)));
+  return `<section class="sec" id="writing"><div class="wrap">
+  <h2>拒絕之後寫的文章</h2>
+  <p class="sub">方案二的文章刊在這裡。每篇開頭都會註明原稿約的單位與稿酬。</p>
+  ${arts.length?`<div class="arts">${arts.map(a=>`<a class="art" href="#${esc(a.id)}"><h3>${esc(a.title)}</h3><p class="by">${esc(a.byline||'匿名')}${a.date?'・'+esc(a.date):''}</p><p class="orig">原稿約${a.unit?'：'+esc(a.unit):''}，每字 ${rateFmt(num(a.rate))} 元，作者拒絕</p></a>`).join('')}</div>`:'<p class="empty">第一篇拒絕之後寫成的文章，會刊在這裡。</p>'}
+  </div></section>`;
+}
+function secPrivacy(){
+  return `<section class="sec" id="privacy"><div class="wrap">
+  <h2>你的資料怎麼處理</h2>
+  <p class="sub">本計畫把資料分成三層。哪一層看得到什麼，寫在下面。</p>
+  <div class="tiers">
+    <div class="tier pub"><h3>公開給所有人</h3><p class="who">任何人打開本站都看得到</p><ul>
+      <li>計畫說明、試算器、拒絕信範本</li>
+      <li>稿酬公開表：單位、年份、每字稿酬、資料來源</li>
+      <li>公開帳本：入帳、每筆補助的月份、方案、金額與鏈上交易連結</li>
+      <li>拒絕紀錄上的邀稿單位名稱，只在申請者同意時列出</li>
+      <li>方案二的文章，以作者選擇的署名刊出（真名、筆名或匿名）</li></ul></div>
+    <div class="tier priv"><h3>只有發起人看得到</h3><p class="who">用來審核與撥款，存放在與本站完全分開的私密頁面</p><ul>
+      <li>申請者的姓名與聯絡方式</li>
+      <li>拒絕證明：邀稿信與拒絕回信，包括邀稿窗口的姓名與信件內容</li>
+      <li>收款錢包地址</li>
+      <li>審核狀態與內部備註</li>
+      <li>申請者不同意公開的邀稿單位名稱</li></ul></div>
+    <div class="tier none"><h3>任何人都看不到</h3><p class="who">本站根本不收，所以沒有人拿得到，包括發起人</p><ul>
+      <li>身分證字號、出生日期、住址、銀行帳號。資格以自我聲明確認，補助以加密貨幣支付，用不到這些。</li>
+      <li>錢包的助記詞與私鑰。任何人向你索取都是詐騙，包括自稱本計畫的人。</li>
+      <li>你在本頁表格裡填的內容。它只留在你的瀏覽器，你自己複製寄出之前，不會傳到任何地方。</li></ul></div>
+  </div>
+  <p class="chainnote">鏈上交易本身是公開的：任何人都能從交易連結看到收款地址。請用專為本計畫新開的錢包收款，不要和你的真名或其他資產連在一起。</p>
+  </div></section>`;
+}
+function secGuide(set){
+  return `<section class="sec" id="faq"><div class="wrap">
+  <div class="guide">
+    <div><h2>第一次用加密錢包</h2><ol class="steps">
+      <li>安裝一個加密錢包，例如 MetaMask 這類瀏覽器或手機錢包，建立一個只用在本計畫的新錢包。</li>
+      <li>建立時會拿到一組助記詞。抄在紙上、離線保存。任何人都不該拿到它，包括本計畫。</li>
+      <li>複製錢包地址（0x 開頭的 42 個字元），填進申請表。地址可以給別人，用來收款。</li>
+      <li>撥款前，發起人會告訴你使用哪一條鏈。收到之後可以留著、轉出，或透過台灣合規的虛擬資產交易所換成新台幣；交易所需要實名認證。</li></ol>
+      ${set.payNote?`<p class="sub" style="margin-top:1rem">目前撥款方式：${esc(set.payNote)}</p>`:''}</div>
+    <div class="faq"><h2>常見問題</h2><div style="margin-top:1.25rem">
+      <details><summary>單篇計價的稿約怎麼算？</summary><p>用單篇總額除以稿約寫明的最低字數。例如單篇 4,500 元、最低 3,000 字，等於每字 1.5 元。稿約只寫字數區間時，以最低字數計。</p></details>
+      <details><summary>怎樣算「明確拒絕」？</summary><p>你的回信要說明拒絕的原因是稿酬過低。可以直接用上面的拒絕信範本。</p></details>
+      <details><summary>方案一說不寫，誰來確認？</summary><p>以你在申請表上的聲明為準。這個計畫靠彼此信任運作。</p></details>
+      <details><summary>預算用完了怎麼辦？</summary><p>補助依收件順序，用完為止。之後仍然可以申請登記，你的拒絕會列入公開帳本的拒絕紀錄；有新的募款入帳，再依序補助。</p></details>
+      <details><summary>邀稿單位會知道是我嗎？</summary><p>你寄出拒絕信，對方本來就知道。本站不會公開你的姓名；方案二的文章用什麼署名，由你決定。</p></details>
+      <details><summary>為什麼用加密貨幣付款？</summary><p>本計畫由 DAO 補助，款項本來就在鏈上。用加密貨幣撥款，每一筆都能公開查證，也讓不熟悉 Web3 的寫作者有機會實際用一次。</p></details>
+      <details><summary>我寫的不是藝評，可以申請嗎？</summary><p>目前限視覺藝術與表演藝術評論。若一段時間內沒有藝評申請，會考慮支持其他文字勞動。</p></details>
+    </div></div>
+  </div></div></section>`;
+}
+function foot(s,set){
+  return `<footer class="foot"><div class="wrap">
+  <h2>支持這個計畫</h2>
+  <div class="support">
+    <p class="sub" style="margin:0">本計畫接受寫作者與各單位的捐款。藝文工會或單位想合作，也歡迎來信。</p>
+    <div class="kv"><span>捐款錢包</span>${set.donationWallet?`<code id="donWallet">${esc(set.donationWallet)}</code><button type="button" class="btn sm" data-copy="#donWallet">複製</button>`:'<span class="muted">錢包地址設定中。</span>'}</div>
+    <div class="kv"><span>計畫信箱</span>${set.contactEmail?`<code id="footMail">${esc(set.contactEmail)}</code><button type="button" class="btn sm" data-copy="#footMail">複製</button>`:'<span class="muted">即將公布。</span>'}</div>
+  </div>
+  <div class="colophon">${set.footerNote?`<p>${esc(set.footerNote)}</p>`:''}${set.initiator?`<p>發起人：${esc(set.initiator)}</p>`:''}<p>最後更新：<span class="mono">${esc(s.updated||'')}</span></p></div>
+  </div></footer>`;
+}
+function previewBanner(){
+  return `<div class="pv"><div class="wrap"><b>預覽中</b><span>這是尚未發布的草稿，只有你看得到。</span><button type="button" class="btn sm" data-act="endPreview">結束預覽</button><button type="button" class="btn sm primary" data-act="openAdmin">回到後台</button></div></div>`;
+}
+function renderMain(){
+  const s=VIEW(),st=stats(s),set=s.settings||{};
+  $('#main').innerHTML=(A.preview?previewBanner():'')+hero(st)+secCalc()+secLetter()+secApply(set)+secRates(s)+secLedger(s,st,set)+secWriting(s)+secPrivacy()+secGuide(set)+foot(s,set);
+  renderCalc();renderLetter();renderApply();
+}
+function renderReader(a){
+  const body=String(a.body||'').split(/\n\s*\n/).map(p=>p.trim()).filter(Boolean).map(p=>/^##\s+/.test(p)?`<h2>${esc(p.replace(/^##\s+/,''))}</h2>`:`<p>${esc(p).replace(/\n/g,'<br>')}</p>`).join('');
+  const w=num(a.words);
+  $('#reader').innerHTML=`<article class="wrap reader">
+  <a class="back" href="#writing">← 回到文章列表</a>
+  <div class="origin"><span class="stamp-s" aria-hidden="true">拒</span><p>本文原為${a.unit?esc(a.unit):'某單位'}邀稿，稿酬每字 ${rateFmt(num(a.rate))} 元，作者拒絕了這份稿約。${w?`本計畫以每字 2 元、最低字數 ${money(w)} 字計，支付 ${money(w*2)} 元。`:'本計畫以每字 2 元支付稿酬。'}</p></div>
+  <h1>${esc(a.title)}</h1>
+  <p class="by">${esc(a.byline||'匿名')}${a.date?'　'+esc(a.date):''}</p>
+  <div class="rbody">${body}</div>
+  </article>`;
+}
+function route(){
+  const h=decodeURIComponent(location.hash.slice(1));
+  const a=/^a-[a-z0-9]+$/.test(h)?(VIEW().articles||[]).find(x=>x.id===h):null;
+  if(a){renderReader(a);$('#main').hidden=true;$('#reader').hidden=false;window.scrollTo(0,0);return}
+  if(!$('#reader').hidden){$('#reader').hidden=true;$('#main').hidden=false;if(h){const el=document.getElementById(h);if(el)el.scrollIntoView()}else window.scrollTo(0,0)}
+}
+
+/* ---------- copy ---------- */
+async function doCopy(btn){
+  const el=$(btn.dataset.copy);if(!el)return;
+  const text=el.textContent;
+  const label=btn.dataset.label||btn.textContent;btn.dataset.label=label;
+  try{await navigator.clipboard.writeText(text);btn.textContent='已複製'}
+  catch(e){const r=document.createRange();r.selectNodeContents(el);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);btn.textContent='已選取，請按複製'}
+  clearTimeout(btn._t);btn._t=setTimeout(()=>{btn.textContent=label},1800);
+}
+
+/* ---------- admin: local editor (opened with #edit) ---------- */
+function initAdmin(){
+  if(A.draft)return;
+  A.draft=clone(PUB);
+  try{const st=sessionStorage.getItem(DKEY);if(st){if(st!==JSON.stringify(PUB)){A.draft=JSON.parse(st);A.restored=true}else sessionStorage.removeItem(DKEY)}}catch(e){}
+  const b=$('#adminBtn');if(b)b.hidden=false;
+  updateAdminBtn();
+}
+function adminGate(){if(location.hash==='#edit'){initAdmin();if(!A.open)openAdmin()}}
+const isDirty=()=>!!A.draft&&JSON.stringify(A.draft)!==JSON.stringify(PUB);
+function updateAdminBtn(){const b=$('#adminBtn');if(b)b.textContent=isDirty()?'發起人後台・有未發布變更':'發起人後台'}
+function touch(){
+  try{if(isDirty())sessionStorage.setItem(DKEY,JSON.stringify(A.draft));else sessionStorage.removeItem(DKEY)}catch(e){}
+  A.confirmPub=false;A.confirmDiscard=false;renderBar();updateAdminBtn();
+}
+function flash(msg,err){const f=$('#adFlash');if(!f)return;f.textContent=msg;f.classList.toggle('err',!!err);clearTimeout(f._t);f._t=setTimeout(()=>{f.textContent=''},5000)}
+
+function openAdmin(){
+  if(!A.draft)initAdmin();
+  if(A.preview){A.preview=false;renderMain()}
+  A.open=true;const el=$('#admin');el.hidden=false;
+  el.innerHTML=`<div class="ad-scrim" data-act="close"></div><aside class="ad-panel" role="dialog" aria-modal="true" aria-labelledby="adTitle">
+  <header class="ad-head"><div><strong id="adTitle">發起人後台</strong><span>只有你看得到這個面板</span></div><button type="button" class="btn sm" id="adClose" data-act="close">關閉</button></header>
+  <div class="ad-tabs" role="tablist" id="adTabs"></div>
+  <div class="ad-flash" id="adFlash" role="status"></div>
+  <div class="ad-body" id="adBody"></div>
+  <footer class="ad-bar" id="adBar"></footer></aside>`;
+  document.body.style.overflow='hidden';
+  renderAdmin();$('#adClose').focus();
+}
+function closeAdmin(){A.open=false;$('#admin').hidden=true;$('#admin').innerHTML='';document.body.style.overflow=''}
+function renderAdmin(){
+  if(!A.open)return;
+  const T=[['cases','案件（私密）'],['pub','公開內容'],['set','設定']];
+  $('#adTabs').innerHTML=T.map(([k,l])=>`<button type="button" role="tab" aria-selected="${A.tab===k}" data-act="tab" data-tab="${k}">${l}</button>`).join('');
+  if(A.tab==='cases')renderCasesTab();else if(A.tab==='pub')renderPubTab();else renderSetTab();
+  renderBar();
+}
+function renderBar(){
+  const bar=$('#adBar');if(!bar)return;const dirty=isDirty();
+  bar.innerHTML=`<div class="bar-l">${dirty?'<b>有尚未更新到網站的變更</b>':'草稿與網站上的 data.json 一致'}${A.restored&&dirty?'<span>（已載入上次未完成的草稿）</span>':''}</div>
+  <div class="bar-r">${dirty?`<button type="button" class="btn sm" data-act="preview">預覽公開頁</button><button type="button" class="btn sm${A.confirmDiscard?' danger':''}" data-act="discard">${A.confirmDiscard?'確定捨棄變更':'捨棄變更'}</button>`:''}
+  <button type="button" class="btn sm primary" data-act="export"${dirty?'':' disabled'}>${A.confirmPub?'確認產生（內容將公開）':'產生 data.json'}</button></div>`;
+}
+
+/* ---------- admin: cases (import from private vault) ---------- */
+function field(f,v,pfx){
+  const k=f[0],l=f[1],t=f[2]||'text',o=f[3],ph=f[4]||'';const id=pfx+k;
+  if(t==='select')return `<div class="field"><label for="${id}">${l}</label><select id="${id}" name="${k}">${o.map(x=>`<option${String(v==null?'':v)===x?' selected':''}>${esc(x)}</option>`).join('')}</select></div>`;
+  if(t==='textarea')return `<div class="field wide"><label for="${id}">${l}</label><textarea id="${id}" name="${k}" rows="${k==='body'?14:4}">${esc(v)}</textarea></div>`;
+  if(t==='checkbox')return `<label class="check"><input type="checkbox" id="${id}" name="${k}"${v?' checked':''}>${l}</label>`;
+  const it={number:'number',date:'date',month:'month',url:'url',email:'email'}[t]||'text';
+  return `<div class="field"><label for="${id}">${l}</label><input id="${id}" name="${k}" type="${it}"${t==='number'?' step="any" inputmode="decimal"':''}${ph?` placeholder="${esc(ph)}"`:''} value="${esc(v)}"></div>`;
+}
+function readForm(form,fields){
+  const o={};fields.forEach(f=>{const k=f[0],t=f[2];const el=form.elements[k];if(!el)return;if(t==='checkbox')o[k]=el.checked;else if(t==='number')o[k]=el.value===''?'':num(el.value);else o[k]=el.value.trim()});return o;
+}
+function renderCasesTab(){
+  $('#adBody').innerHTML=`<section>
+    <span class="tier-tag priv">私密資料不在本頁</span>
+    <p class="ad-note">申請者的姓名、聯絡方式、錢包地址和內部備註，存在另一個只有你能開啟的「拒絕案件庫」頁面（請用你自己的書籤打開），和這個網站完全分開。本頁不存任何申請者個資。在案件庫把一筆案件整理成公開紀錄後，把代碼貼到下面匯入。</p>
+    <details class="ad-paste" open><summary>匯入公開紀錄</summary>
+      <p class="hint" style="margin-top:.5rem">貼上案件庫「整理成公開紀錄」產生的代碼。</p>
+      <textarea id="adImport" rows="4" aria-label="貼上公開紀錄代碼"></textarea>
+      <button type="button" class="btn sm" data-act="parseImport">讀取</button></details>
+    <div id="adImportPreview"></div>
+    <p class="ad-budget" id="adBudget"></p>
+  </section>`;
+  const st=stats(A.draft);
+  $('#adBudget').innerHTML=`公開帳本餘額（含未發布變更）<b>${money(st.bal)}</b> 元・已公開拒絕 <b>${st.count}</b> 筆`;
+}
+function parseImport(){
+  let o=null;
+  try{o=JSON.parse($('#adImport').value)}catch(e){}
+  if(!o||o.ryd!==1||!o.rec||!o.rec.code){flash('讀不到紀錄。請貼上案件庫匯出的整段代碼。',true);return}
+  const r=o.rec;A.pendingImport=o;
+  const row=(k,v)=>`<dt>${k}</dt><dd>${v}</dd>`;
+  const exist=(A.draft.refusals||[]).some(x=>x.code===r.code);
+  $('#adImportPreview').innerHTML=`<div class="ad-preview">
+    <h4><span class="tier-tag pub">將公開</span>　加入草稿的拒絕紀錄${exist?'（更新原有紀錄）':''}</h4>
+    <dl>${row('編號',esc(r.code))}${row('拒絕月份',esc(r.month||'—'))}${row('邀稿單位',r.unit?esc(r.unit):'未公開（申請者未同意）')}${row('每字稿酬',rateFmt(num(r.rate))+' 元')}${row('方案',r.plan==='1'?'方案一':r.plan==='2'?'方案二':'—')}${row('補助',money(num(r.payout))+' 元')}${row('狀態',esc(r.status||''))}${row('交易連結',r.txUrl?esc(r.txUrl):'—')}</dl>
+    ${o.rateRow?`<p class="hint">同時加入稿酬公開表：${esc(o.rateRow.unit)}，每字 ${rateFmt(num(o.rateRow.rate))} 元。</p>`:''}
+    ${o.fee?`<p class="hint">同時在帳本記一筆執行費 ${money(num(o.fee))} 元。</p>`:''}
+    <div class="ad-actions" style="margin:0"><button type="button" class="btn sm primary" data-act="confirmImport">加入公開草稿</button><button type="button" class="btn sm" data-act="cancelImport">取消</button></div>
+    <p class="hint">加入後還不會公開，要按下方的「發布到公開頁」才會更新。</p></div>`;
+}
+function confirmImport(){
+  const o=A.pendingImport;if(!o)return;const d=A.draft;d.refusals=d.refusals||[];
+  const i=d.refusals.findIndex(x=>x.code===o.rec.code);
+  if(i>=0)d.refusals[i]=o.rec;else d.refusals.push(o.rec);
+  if(o.rateRow){d.rates=d.rates||[];d.rates.push(Object.assign({id:newId('t'),pub:'',note:''},o.rateRow))}
+  if(o.fee){d.funds=d.funds||[];d.funds.push({id:newId('f'),date:today(),kind:'執行費',label:o.rec.code+' 執行費',amount:num(o.fee),token:'',txUrl:''})}
+  A.pendingImport=null;touch();renderCasesTab();
+  flash(o.rec.code+' 已加入公開草稿，尚未發布。');
+}
+
+/* ---------- admin: public content ---------- */
+const LISTS=[
+  {key:'refusals',label:'拒絕紀錄',head:r=>`${r.code||'—'}　${r.unit||'未公開單位'}　${money(num(r.payout))} 元　${r.status||''}`,fields:[['code','編號'],['month','拒絕月份','month',null,'2026-11'],['unit','邀稿單位（申請者未同意則留空）'],['sector','單位類型','select',[''].concat(SECTORS)],['rate','每字稿酬（元）','number'],['words','稿約最低字數','number'],['plan','方案（1 或 2）','select',['','1','2']],['payout','補助金額（元）','number'],['status','狀態','select',PUB_STATUS],['txUrl','交易連結（https://）','url']]},
+  {key:'funds',label:'入帳與執行費',head:f=>`${f.date||''}　${f.kind||''}　${f.label||''}　${money(num(f.amount))} 元`,fields:[['date','日期','date'],['kind','類別','select',['收入','執行費']],['label','說明','text',null,'FAB DAO 行動客廳補助'],['amount','金額（新台幣）','number'],['token','鏈上金額（可不填）','text',null,'950 USDT'],['txUrl','交易連結（https://）','url']]},
+  {key:'rates',label:'稿酬公開表',head:r=>`${r.unit||''}${r.pub?' '+r.pub:''}${r.year?' '+r.year:''}　每字 ${rateFmt(num(r.rate))} 元`,fields:[['unit','單位'],['pub','刊物或計畫'],['sector','單位類型','select',[''].concat(SECTORS)],['year','年份（可不填）'],['rate','每字稿酬（元）','number'],['basis','計算依據','text',null,'單篇 6,000 元／約 2,000 字'],['source','資料來源','select',SOURCES],['note','備註']]},
+  {key:'articles',label:'文章（方案二）',head:a=>`${a.title||'（未命名）'}　${a.byline||'匿名'}`,fields:[['title','標題'],['byline','署名（依作者選擇）'],['date','刊出日期','date'],['unit','原邀稿單位（作者未同意則留空）'],['rate','原稿酬每字（元）','number'],['words','稿約最低字數','number'],['body','內文（空一行分段；以「## 」開頭的段落是小標）','textarea']]},
+  {key:'raises',label:'已調升稿酬的單位',head:r=>`${r.unit||''}　${rateFmt(num(r.from))} → ${rateFmt(num(r.to))} 元`,fields:[['unit','單位或刊物'],['from','調整前每字（元）','number'],['to','調整後每字（元）','number'],['date','調整時間','month',null,'2027-03'],['note','說明']]}
+];
+const SET_FIELDS=[['siteUrl','本站網址（放進拒絕信）','url',null,'https://claude.ai/…'],['contactEmail','計畫信箱（申請與回報都寄到這裡）','email'],['donationWallet','捐款錢包地址'],['payNote','撥款方式說明','text',null,'以某條鏈上的 USDT 撥款'],['budgetNote','帳本預算說明','textarea'],['footerNote','頁尾說明'],['initiator','發起人公開署名（留空則不顯示）']];
+function renderPubTab(){
+  const d=A.draft;
+  $('#adBody').innerHTML=`<section><span class="tier-tag pub">發布後所有人都看得到</span>
+    <p class="ad-note">這裡的修改先存成草稿，按下方「發布到公開頁」後才會更新。只放可以公開的資料；姓名、聯絡方式和錢包地址請留在「案件」裡。</p></section>
+    ${LISTS.map(L=>{const items=d[L.key]||[];const editing=A.itemEdit&&A.itemEdit.list===L.key;const open=editing||A.openLists[L.key];
+      return `<details class="ad-list"${open?' open':''}><summary data-act="tog" data-list="${L.key}">${L.label}<span class="count">${items.length}</span></summary>
+      ${items.length?`<ul>${items.map(it=>`<li><span>${esc(L.head(it))}</span><button type="button" class="btn sm" data-act="editItem" data-list="${L.key}" data-id="${esc(it.id)}">編輯</button></li>`).join('')}</ul>`:''}
+      ${editing?itemForm(L):`<div class="ad-list-foot"><button type="button" class="btn sm" data-act="addItem" data-list="${L.key}">新增</button></div>`}</details>`}).join('')}`;
+}
+function itemForm(L){
+  const e=A.itemEdit;const it=e.id?((A.draft[L.key]||[]).find(x=>x.id===e.id)||{}):(e.seed||{});
+  return `<form class="ad-form" id="itemForm" data-list="${L.key}" novalidate><div class="ad-grid">${L.fields.map(f=>field(f,it[f[0]],'if-')).join('')}</div>
+  <div class="ad-actions" style="margin:0"><button type="submit" class="btn sm primary">存到草稿</button>${e.id?`<button type="button" class="btn sm${A.itemDelArm?' danger':''}" data-act="delItem">${A.itemDelArm?'確定刪除':'刪除'}</button>`:''}<button type="button" class="btn sm" data-act="cancelItem">取消</button></div></form>`;
+}
+function saveItem(form){
+  const L=LISTS.find(x=>x.key===form.dataset.list);if(!L)return;
+  const o=readForm(form,L.fields);
+  if(o.txUrl&&!safeUrl(o.txUrl)){flash('交易連結要以 https:// 開頭。',true);return}
+  const arr=A.draft[L.key]=A.draft[L.key]||[];
+  if(A.itemEdit.id){const i=arr.findIndex(x=>x.id===A.itemEdit.id);if(i>=0)arr[i]=Object.assign({id:A.itemEdit.id},o)}
+  else{const pfx={refusals:'r-',funds:'f',rates:'t',articles:'a-',raises:'u'}[L.key];arr.push(Object.assign({id:newId(pfx)},o))}
+  A.itemEdit=null;A.itemDelArm=false;A.openLists[L.key]=true;touch();renderPubTab();flash('已存到草稿，尚未發布。');
+}
+function renderSetTab(){
+  const s=A.draft.settings||{};
+  $('#adBody').innerHTML=`<section><span class="tier-tag pub">發布後所有人都看得到</span><p class="ad-note">這些設定都會出現在公開頁上。留空的欄位不會顯示。</p></section>
+  <form class="ad-form" id="setForm" novalidate><div class="ad-grid">${SET_FIELDS.map(f=>field(f,s[f[0]],'sf-')).join('')}</div>
+  <div class="ad-actions" style="margin:0"><button type="submit" class="btn sm primary">存到草稿</button></div></form>`;
+}
+function saveSettings(form){
+  const o=readForm(form,SET_FIELDS);
+  if(o.siteUrl&&!safeUrl(o.siteUrl)){flash('本站網址要以 https:// 開頭。',true);return}
+  A.draft.settings=Object.assign({},A.draft.settings||{},o);touch();flash('設定已存到草稿，尚未發布。');
+}
+
+/* ---------- admin: publish ---------- */
+function exportData(){
+  if(!isDirty())return;
+  if(!A.confirmPub){A.confirmPub=true;renderBar();return}
+  const st=clone(A.draft);st.updated=today();
+  A.draft=st;A.confirmPub=false;
+  try{sessionStorage.setItem(DKEY,JSON.stringify(st))}catch(e){}
+  const body=$('#adBody');
+  if(body)body.insertAdjacentHTML('afterbegin',`<div class="ad-preview" id="adExport">
+    <h4><span class="tier-tag pub">更新網站</span>　複製下面全部內容，覆蓋 GitHub 上的 data.json</h4>
+    <p class="hint">在 GitHub 打開 data.json → 鉛筆圖示編輯 → 全選刪除 → 貼上 → Commit changes。約一分鐘後網站就會更新。</p>
+    <pre class="apptext" id="adJson" style="max-height:16rem">${esc(JSON.stringify(st,null,1))}</pre>
+    <div class="ad-actions" style="margin:0"><button type="button" class="btn sm primary" data-copy="#adJson">複製 data.json</button><button type="button" class="btn sm" data-act="closeExport">關閉</button></div>
+    <p class="hint">貼上並 commit 之後，回到這裡按「已更新完成」，草稿就會歸零。</p>
+    <div class="ad-actions" style="margin:0"><button type="button" class="btn sm" data-act="markDone">已更新完成</button></div></div>`);
+  if(body)body.scrollTop=0;
+  renderBar();
+}
+function discard(){
+  if(!A.confirmDiscard){A.confirmDiscard=true;renderBar();return}
+  A.draft=clone(PUB);A.restored=false;A.itemEdit=null;touch();renderAdmin();flash('已捨棄未發布的變更。');
+}
+
+/* ---------- events ---------- */
+document.addEventListener('input',onInput);
+document.addEventListener('change',onInput);
+function onInput(e){
+  const f=e.target.closest&&e.target.closest('form');if(!f)return;
+  if(f.id==='calcForm')renderCalc();else if(f.id==='letterForm')renderLetter();else if(f.id==='applyForm')renderApply();
+}
+document.addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target;
+  if(f.id==='itemForm')saveItem(f);else if(f.id==='setForm')saveSettings(f);
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape'&&A.open)closeAdmin()});
+document.addEventListener('click',e=>{
+  const cp=e.target.closest('[data-copy]');if(cp){doCopy(cp);return}
+  const b=e.target.closest('[data-act]');if(!b)return;const act=b.dataset.act;
+  if(act==='tog'){A.openLists[b.dataset.list]=!b.parentElement.open;return}
+  const H={
+    toLetter(){const w=Math.round(num($('#c-words').value)),m=$('#c-mode-t').checked?'t':'w';$('#l-rate').value=rateFmt(readRate(w,m,$('#c-rate').value,$('#c-total').value));renderLetter();go('#letter')},
+    toApply(){const t=$('#c-mode-t').checked;$('#a-words').value=$('#c-words').value;$('#a-mode-t').checked=t;$('#a-mode-w').checked=!t;$('#a-rate').value=$('#c-rate').value;$('#a-total').value=$('#c-total').value;renderApply();go('#apply-form')},
+    openAdmin,close:closeAdmin,
+    tab(){A.tab=b.dataset.tab;renderAdmin()},
+    parseImport,confirmImport,
+    cancelImport(){A.pendingImport=null;$('#adImportPreview').innerHTML=''},
+    addItem(){A.itemEdit={list:b.dataset.list,id:null,seed:b.dataset.list==='funds'?{date:today(),kind:'收入'}:b.dataset.list==='articles'?{date:today()}:{}};A.itemDelArm=false;renderPubTab()},
+    editItem(){A.itemEdit={list:b.dataset.list,id:b.dataset.id};A.itemDelArm=false;renderPubTab()},
+    delItem(){if(!A.itemDelArm){A.itemDelArm=true;renderPubTab();return}const arr=A.draft[A.itemEdit.list]||[];const i=arr.findIndex(x=>x.id===A.itemEdit.id);if(i>=0)arr.splice(i,1);A.openLists[A.itemEdit.list]=true;A.itemEdit=null;A.itemDelArm=false;touch();renderPubTab();flash('已從草稿刪除，尚未發布。')},
+    cancelItem(){A.itemEdit=null;A.itemDelArm=false;renderPubTab()},
+    export:exportData,discard,
+    closeExport(){const e=$('#adExport');if(e)e.remove()},
+    markDone(){PUB=clone(A.draft);A.restored=false;try{sessionStorage.removeItem(DKEY)}catch(e){}const el=$('#adExport');if(el)el.remove();touch();renderAdmin();flash('已標記為完成。');},
+    preview(){A.preview=true;closeAdmin();renderMain();route();window.scrollTo(0,0)},
+    endPreview(){A.preview=false;renderMain();route();window.scrollTo(0,0)}
+  };
+  if(H[act]){e.preventDefault();H[act]()}
+});
+window.addEventListener('hashchange',route);
+
+function boot(){
+  fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw 0;return r.json()}).then(d=>{
+    PUB=d;A.ready=true;renderMain();route();adminGate();
+  }).catch(()=>{
+    $('#main').innerHTML='<div class="wrap" style="padding-block:4rem"><h2>資料載入失敗</h2><p class="sub">這個頁面需要和它放在一起的 data.json 才能顯示內容。如果你是在本機直接打開檔案，瀏覽器會擋下讀取，請改用網站上的網址。</p></div>';
+  });
+}
+window.addEventListener('hashchange',adminGate);
+boot();
+})();
+</script>
+</body>
+</html>

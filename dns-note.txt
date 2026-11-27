@@ -1,0 +1,17 @@
+給 FAB DAO 協助設定網域的朋友：
+
+refuse.fabdao.world 目前是轉址到 claude.ai，點進去網址列會變成
+claude.ai，想改成網站直接掛在自己的網域下。
+
+請幫忙改成這樣：
+
+1. 刪掉現有的轉址（redirect / forwarding）設定
+2. 新增一筆 CNAME 記錄：
+       主機/名稱： refuse
+       指向/目標： <GitHub 帳號>.github.io
+       （注意結尾是 .github.io，不是完整的 repo 網址）
+
+網站放在 GitHub Pages，GitHub 那邊已經填好自訂網域 refuse.fabdao.world，
+HTTPS 憑證由 GitHub 自動簽發，不用另外處理。
+
+DNS 生效通常幾分鐘到幾小時。

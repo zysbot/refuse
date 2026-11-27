@@ -1,0 +1,85 @@
+{
+ "v": 1,
+ "updated": "2026-11-09",
+ "settings": {
+  "siteUrl": "https://refuse.fabdao.world/",
+  "contactEmail": "yszhang@volumedao.xyz",
+  "donationWallet": "0x1F6C07A5a25faf5c8315826827C15a8340f30767",
+  "payNote": "從計畫錢包 0x1F6C07A5a25faf5c8315826827C15a8340f30767，在以太坊的 OP Mainnet（Optimism）上以 USDT 或 ETH 撥款。MetaMask 這類錢包加入 OP Mainnet 網路即可收款，錢包地址不變。",
+  "budgetNote": "計畫預算 30,000 元，向 FAB DAO 行動客廳申請：補助 24,000 元、執行費 6,000 元。款項入帳後逐筆列在下方。",
+  "footerNote": "本計畫向 FAB DAO 行動客廳申請補助，為期一年。",
+  "initiator": ""
+ },
+ "rates": [
+  {
+   "id": "t1",
+   "unit": "台新銀行文化藝術基金會",
+   "pub": "台新藝術獎 提名觀察人評論",
+   "sector": "基金會",
+   "year": "2024",
+   "rate": 4,
+   "basis": "單篇 6,000 元／最低 1,200–1,500 字，以 1,500 字計",
+   "source": "發起人親身經驗",
+   "note": "因應通膨與基本工資調整，較前一年調高"
+  },
+  {
+   "id": "t2",
+   "unit": "台新銀行文化藝術基金會",
+   "pub": "台新藝術獎 提名觀察人評論",
+   "sector": "基金會",
+   "year": "2023",
+   "rate": 3.33,
+   "basis": "單篇 5,000 元／最低 1,200–1,500 字，以 1,500 字計",
+   "source": "發起人親身經驗",
+   "note": ""
+  },
+  {
+   "id": "t3",
+   "unit": "典藏 ARTouch",
+   "pub": "專欄文章",
+   "sector": "民間媒體",
+   "year": "",
+   "rate": 3,
+   "basis": "單篇 6,000 元／約 2,000 字",
+   "source": "發起人親身經驗",
+   "note": "無嚴格字數規定"
+  },
+  {
+   "id": "t4",
+   "unit": "臺灣當代文化實驗場 C-LAB",
+   "pub": "《實驗波》",
+   "sector": "公部門",
+   "year": "",
+   "rate": 3,
+   "basis": "每字 3 元",
+   "source": "發起人整理",
+   "note": ""
+  },
+  {
+   "id": "t5",
+   "unit": "高雄市立美術館",
+   "pub": "《藝術認證》",
+   "sector": "公部門",
+   "year": "",
+   "rate": 1.5,
+   "basis": "每字 1.5 元",
+   "source": "發起人親身經驗",
+   "note": "發起人實際收到的稿約"
+  },
+  {
+   "id": "t6",
+   "unit": "國立臺南藝術大學",
+   "pub": "《藝術觀點 ACT》",
+   "sector": "公立大學",
+   "year": "",
+   "rate": 1,
+   "basis": "每字 1 元",
+   "source": "同業告知",
+   "note": ""
+  }
+ ],
+ "refusals": [],
+ "funds": [],
+ "articles": [],
+ "raises": []
+}
